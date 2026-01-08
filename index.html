@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <link rel="manifest" href="./manifest.json">
+	  <link rel="icon" href="./icon-192.png" type="image/png">
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff6f52" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>Streaks</title>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        background: #ff6f52;
+      }
+      object {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <object type="image/svg+xml" data="./streaks2.svg"></object>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+  </body>
+</html>
